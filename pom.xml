@@ -7,6 +7,8 @@
     <artifactId>study</artifactId>
     <version>1.0.0-RELEASE</version>
     <modules>
+        <module>douyin</module>
+        <module>gtech-tools</module>
         <module>sharding-jdbc</module>
     </modules>
     <packaging>pom</packaging>
