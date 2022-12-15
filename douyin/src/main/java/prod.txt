@@ -1,0 +1,81 @@
+server.port = 8080
+spring.profiles = pro
+eureka.client.serviceUrl.defaultZone = http://cloud-eureka:8080/eureka/
+eureka.instance.prefer-ip-address = true
+eureka.instance.instance-id = ${spring.cloud.client.ip-address}:${server.port}
+eureka.client.enabled = true
+#打印日志，sql信息
+#logging.level.com.gtech.titan.logistics.dao = DEBUG
+spring.shardingsphere.datasource.names = master,read
+spring.shardingsphere.masterslave.master-data-source-name = master
+spring.shardingsphere.masterslave.slave-data-source-names = read
+spring.shardingsphere.masterslave.name = logistics_db
+spring.shardingsphere.datasource.master.type = com.alibaba.druid.pool.DruidDataSource
+spring.shardingsphere.datasource.master.url = jdbc:mysql://rm-uf6d9ctv8l380o07k.mysql.rds.aliyuncs.com:3306/prod_logistics_db?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+spring.shardingsphere.datasource.master.username = prod_logistics
+spring.shardingsphere.datasource.master.password = XwET0iDQ
+spring.shardingsphere.datasource.master.max-active = 100
+spring.shardingsphere.datasource.read.type = com.alibaba.druid.pool.DruidDataSource
+spring.shardingsphere.datasource.read.url = jdbc:mysql://rm-uf6d9ctv8l380o07k.mysql.rds.aliyuncs.com:3306/prod_logistics_db?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+spring.shardingsphere.datasource.read.username = prod_logistics
+spring.shardingsphere.datasource.read.password = XwET0iDQ
+spring.shardingsphere.datasource.read.max-active = 100
+#spring.shardingsphere.props.sql.show=true
+spring.redis.host = r-uf6w952u1gdukz56s6.redis.rds.aliyuncs.com
+spring.redis.database = 13
+spring.redis.jedis.pool.max-active = 8
+spring.redis.jedis.pool.max-wait = -1
+spring.redis.jedis.pool.max-idle = 8
+spring.redis.jedis.pool.min-idle = 0
+spring.redis.timeout = 3000
+#============================================================================================================================================================
+#config加密密钥,各环境密钥不同
+gtech.logistics.security.aes.key = 142c56deeca08d22a29c56b3273c8b23
+#默认物流编码
+logistics.default.logistics.code = shunfeng
+#oaid物流编码
+logistics.default.oaid.logistics.code = shunfengkuaiyun
+#hub config
+titan.hub.uri = http://hub:8080/api/v{version}/{apiName}
+titan.hub.appid = LOGISTICS
+titan.hub.appsecret = OMjLA3V30YfP0V8UynFNwh9zwGo3sZ3JEU7SlLE25VvdnjVPP6hmb1e6Qfbz0w0oOR4TZYugpdY8fcVzjnXjJNAQfDeevmiDKil0d6IDmg0PsX8STReybWbLLq2ePW1C
+#rocket mq
+rocketmq.name-server = 10.101.180.183:9876 10.101.170.7:9876
+rocketmq.producer.group = logistics_filecloud_response_producer
+logistics.default.tempids = {"shunfeng":"74cc5e673b9a41b6b5313764ff407129","yuantong":"3468bc6bac5548709abf5652f51d076b","yunda":"4d8b2838de30411187b850793028f73d"}
+logistics.default.thirdTemplate.urls = {"shunfengkuaiyun":"http://cloudprint.cainiao.com/template/standard/471314/14","yunda":"https://lf3-cm.ecombdstatic.com/obj/logistics-davinci/template/template_76.xml","yuantong":"https://lf3-cm.ecombdstatic.com/obj/logistics-davinci/template/template_76.xml"}
+#google map url
+google.map.gecode.url = https://maps.googleapis.com/maps/api/geocode/json
+google.map.distance.url = https://maps.googleapis.com/maps/api/distancematrix/json
+
+spring.shardingsphere.datasource.master.min-evictable-idle-time-millis = 300000
+spring.shardingsphere.datasource.master.time-between-eviction-runs-millis = 60000
+spring.shardingsphere.datasource.read.connection-properties = druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+spring.shardingsphere.datasource.master.max-wait = 60000
+spring.shardingsphere.datasource.master.pool-prepared-statements = true
+spring.shardingsphere.datasource.read.maxActive = 100
+spring.shardingsphere.datasource.master.min-idle = 10
+spring.shardingsphere.datasource.master.test-on-return = false
+spring.shardingsphere.datasource.read.time-between-eviction-runs-millis = 60000
+spring.shardingsphere.datasource.read.test-on-borrow = false
+spring.shardingsphere.datasource.master.test-on-borrow = false
+spring.shardingsphere.datasource.read.test-on-return = false
+spring.shardingsphere.datasource.read.max-wait = 60000
+spring.shardingsphere.datasource.read.min-evictable-idle-time-millis = 300000
+spring.shardingsphere.datasource.read.initial-size = 5
+
+spring.shardingsphere.datasource.master.max-pool-prepared-statement-per-connection-size = 20
+spring.shardingsphere.datasource.read.test-while-idle = true
+spring.shardingsphere.datasource.read.pool-prepared-statements = true
+spring.shardingsphere.datasource.read.max-pool-prepared-statement-per-connection-size = 20
+spring.shardingsphere.datasource.master.maxActive = 100
+spring.shardingsphere.datasource.read.min-idle = 200
+
+spring.shardingsphere.datasource.master.validation-query = SELECT 1 FROM DUAL
+spring.shardingsphere.datasource.master.test-while-idle = true
+spring.shardingsphere.datasource.master.initial-size = 5
+spring.shardingsphere.datasource.master.connection-properties = druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+spring.shardingsphere.datasource.read.validation-query = SELECT 1 FROM DUAL
+
+feign.client.config.default.connectTimeout = 1000
+feign.client.config.default.readTimeout = 10000

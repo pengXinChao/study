@@ -1,0 +1,44 @@
+server:
+  port: 8081
+
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    group: yc
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/gtech_util_db
+    username: pxc
+    password: pxc985211
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    druid:
+      #底层开启功能，stat（sql监控），wall（防火墙）
+      filters: stat,wall
+      filter:
+        #开启sql监控功能
+        stat:
+          slow-sql-millis: 1000
+          log-slow-sql: true
+          enabled: true
+        #防火墙
+        wall:
+          enabled: true
+      #监控页的配置
+      stat-view-servlet:
+        enabled: true
+        login-username: admin
+        login-password: admin
+        reset-enable: false
+      #监控web属性
+      web-stat-filter:
+        enabled: true
+        url-pattern: /*
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+      #监控SpringBean
+      aop-patterns: com.zfs.boot.*
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.person.gtech.dao.entity
+

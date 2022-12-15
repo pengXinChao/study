@@ -16,6 +16,7 @@ public class Main {
         GlobalConfig.initAppSecret("154771e6-da29-403d-a76a-f55f562743df");
         //入参为shopId
         AccessToken accessToken = AccessTokenBuilder.build(7630771L);
+//        AccessToken accessToken = AccessTokenBuilder.build(7630771L);
         System.out.println("Token:" + accessToken.getAccessToken());
     }
 }

@@ -17,11 +17,14 @@
         <!-- Spring boot-->
         <spring.boot.version>2.7.4</spring.boot.version>
         <!-- Mysql -->
-        <mysql.connector.version>8.0.16</mysql.connector.version>
-        <druid.spring.boot.version>1.2.9</druid.spring.boot.version>
+        <mysql.connector.version>8.0.31</mysql.connector.version>
+        <druid.spring.boot.version>1.1.21</druid.spring.boot.version>
         <mybatis.version>3.5.7</mybatis.version>
+        <tk.mybatis.version>4.1.5</tk.mybatis.version>
         <!-- Common -->
         <lombok.version>1.18.24</lombok.version>
+        <commons.lang3.version>3.12.0</commons.lang3.version>
+        <rocketmq-starter.version>2.2.0</rocketmq-starter.version>
     </properties>
 
     <!-- 版本管理 -->
@@ -63,6 +66,25 @@
                 <version>${mybatis.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper</artifactId>
+                <version>${tk.mybatis.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-spring-boot-starter</artifactId>
+                <version>${rocketmq-starter.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons.lang3.version}</version>
+        </dependency>
+    </dependencies>
 </project>
