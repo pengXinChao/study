@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.person.gtech.dao.mapper.TOrderReceiveMapper">
+
+    <resultMap id="BaseResultMap" type="com.person.gtech.dao.entity.TOrderReceive">
+            <result property="tenantCode" column="TENANT_CODE" jdbcType="VARCHAR"/>
+            <result property="domainCode" column="DOMAIN_CODE" jdbcType="VARCHAR"/>
+            <result property="orgCode" column="ORG_CODE" jdbcType="VARCHAR"/>
+            <result property="orderCode" column="ORDER_CODE" jdbcType="VARCHAR"/>
+            <result property="lastName" column="LAST_NAME" jdbcType="VARCHAR"/>
+            <result property="firstName" column="FIRST_NAME" jdbcType="VARCHAR"/>
+            <result property="name" column="NAME" jdbcType="VARCHAR"/>
+            <result property="mobile" column="MOBILE" jdbcType="VARCHAR"/>
+            <result property="country" column="COUNTRY" jdbcType="VARCHAR"/>
+            <result property="countryName" column="COUNTRY_NAME" jdbcType="VARCHAR"/>
+            <result property="province" column="PROVINCE" jdbcType="VARCHAR"/>
+            <result property="provinceName" column="PROVINCE_NAME" jdbcType="VARCHAR"/>
+            <result property="city" column="CITY" jdbcType="VARCHAR"/>
+            <result property="cityName" column="CITY_NAME" jdbcType="VARCHAR"/>
+            <result property="district" column="DISTRICT" jdbcType="VARCHAR"/>
+            <result property="districtName" column="DISTRICT_NAME" jdbcType="VARCHAR"/>
+            <result property="streetName" column="STREET_NAME" jdbcType="VARCHAR"/>
+            <result property="address" column="ADDRESS" jdbcType="VARCHAR"/>
+            <result property="addressId" column="ADDRESS_ID" jdbcType="VARCHAR"/>
+            <result property="telephone" column="TELEPHONE" jdbcType="VARCHAR"/>
+            <result property="idCode" column="ID_CODE" jdbcType="VARCHAR"/>
+            <result property="mail" column="MAIL" jdbcType="VARCHAR"/>
+            <result property="zipCode" column="ZIP_CODE" jdbcType="VARCHAR"/>
+            <result property="distributionType" column="DISTRIBUTION_TYPE" jdbcType="VARCHAR"/>
+            <result property="storeName" column="STORE_NAME" jdbcType="VARCHAR"/>
+            <result property="storeCode" column="STORE_CODE" jdbcType="VARCHAR"/>
+            <result property="latitude" column="LATITUDE" jdbcType="VARCHAR"/>
+            <result property="longitude" column="LONGITUDE" jdbcType="VARCHAR"/>
+            <result property="storeConfirmCode" column="STORE_CONFIRM_CODE" jdbcType="VARCHAR"/>
+            <result property="logisticsType" column="LOGISTICS_TYPE" jdbcType="VARCHAR"/>
+            <result property="logisticsTransType" column="LOGISTICS_TRANS_TYPE" jdbcType="VARCHAR"/>
+            <result property="logisticsCode" column="LOGISTICS_CODE" jdbcType="VARCHAR"/>
+            <result property="logisticsName" column="LOGISTICS_NAME" jdbcType="VARCHAR"/>
+            <result property="createTime" column="CREATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="UPDATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="deleteTime" column="DELETE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="createUser" column="CREATE_USER" jdbcType="VARCHAR"/>
+            <result property="updateUser" column="UPDATE_USER" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        TENANT_CODE,DOMAIN_CODE,ORG_CODE,
+        ORDER_CODE,LAST_NAME,FIRST_NAME,
+        NAME,MOBILE,COUNTRY,
+        COUNTRY_NAME,PROVINCE,PROVINCE_NAME,
+        CITY,CITY_NAME,DISTRICT,
+        DISTRICT_NAME,STREET_NAME,ADDRESS,
+        ADDRESS_ID,TELEPHONE,ID_CODE,
+        MAIL,ZIP_CODE,DISTRIBUTION_TYPE,
+        STORE_NAME,STORE_CODE,LATITUDE,
+        LONGITUDE,STORE_CONFIRM_CODE,LOGISTICS_TYPE,
+        LOGISTICS_TRANS_TYPE,LOGISTICS_CODE,LOGISTICS_NAME,
+        CREATE_TIME,UPDATE_TIME,DELETE_TIME,
+        CREATE_USER,UPDATE_USER
+    </sql>
+
+    <update id="updateReceive">
+        update t_order_receive
+        set
+            `province` = #{province},
+            `city` = #{city},
+            `district` = #{district},
+            `name` = #{name},
+            `mobile` = #{mobile},
+            `telephone` = #{telephone},
+            `address` = #{address},
+            `DESENSITIZATION_NAME` = #{desensitizationName},
+            `DESENSITIZATION_TELEPHONE` = #{desensitizationTelephone},
+            `DESENSITIZATION_MOBILE` = #{desensitizationMobile},
+            `DESENSITIZATION_ADDRESS` = #{desensitizationAddress},
+            `update_time` = `update_time`
+            where order_code = #{orderCode}
+    </update>
+
+    <select id="queryList" resultType="com.person.gtech.dao.entity.TOrderReceive">
+        select * from t_order_receive limit #{start}, #{size}
+    </select>
+</mapper>

@@ -11,7 +11,7 @@ import tk.mybatis.spring.annotation.MapperScan;
  */
 @SpringBootApplication
 @MapperScan("com.person.gtech.dao.mapper")
-@ComponentScan(basePackages = {"com.person"})
+@ComponentScan(basePackages = {"com.person", "com.gtech"})
 public class GtechToolApplication {
 
     public static void main(String[] args) {

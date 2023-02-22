@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.person.ua.dao.mapper.TDeliveryOrderMapper">
+
+    <delete id="deleteByOrderCodes">
+        delete from t_delivery_order where delivery_order_code in
+        <foreach collection="orderCodes" open="(" close=")" index="idx" item="orderCode" separator=",">
+            #{orderCode}
+        </foreach>
+    </delete>
+
+    <select id="selectAllByMemberCode" resultType="java.lang.String">
+        select delivery_order_code from t_delivery_order where member_code = #{memberCode}
+    </select>
+</mapper>

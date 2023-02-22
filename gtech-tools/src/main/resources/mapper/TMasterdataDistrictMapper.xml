@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.person.gtech.dao.mapper.TMasterdataDistrictMapper">
+
+    <resultMap id="BaseResultMap" type="com.person.gtech.dao.entity.TMasterdataDistrict">
+            <id property="id" column="ID" jdbcType="BIGINT"/>
+            <result property="districtCode" column="DISTRICT_CODE" jdbcType="VARCHAR"/>
+            <result property="districtPcode" column="DISTRICT_PCODE" jdbcType="VARCHAR"/>
+            <result property="districtName" column="DISTRICT_NAME" jdbcType="VARCHAR"/>
+            <result property="level" column="LEVEL" jdbcType="TINYINT"/>
+            <result property="tenantCode" column="TENANT_CODE" jdbcType="VARCHAR"/>
+            <result property="state" column="STATE" jdbcType="TINYINT"/>
+            <result property="updateTime" column="UPDATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="updateUser" column="UPDATE_USER" jdbcType="VARCHAR"/>
+            <result property="createTime" column="CREATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="createUser" column="CREATE_USER" jdbcType="VARCHAR"/>
+            <result property="districtMatch" column="DISTRICT_MATCH" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ID,DISTRICT_CODE,DISTRICT_PCODE,
+        DISTRICT_NAME,LEVEL,TENANT_CODE,
+        STATE,UPDATE_TIME,UPDATE_USER,
+        CREATE_TIME,CREATE_USER,DISTRICT_MATCH
+    </sql>
+
+    <select id="queryAll" resultType="com.person.gtech.dao.entity.TMasterdataDistrict">
+        select * from t_masterdata_district;
+    </select>
+</mapper>

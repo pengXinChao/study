@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.person.gtech.dao.mapper.TOrderPaymentMapper">
+
+    <resultMap id="BaseResultMap" type="com.person.gtech.dao.entity.TOrderPayment">
+            <result property="tenantCode" column="TENANT_CODE" jdbcType="VARCHAR"/>
+            <result property="domainCode" column="DOMAIN_CODE" jdbcType="VARCHAR"/>
+            <result property="orgCode" column="ORG_CODE" jdbcType="VARCHAR"/>
+            <result property="channelCode" column="CHANNEL_CODE" jdbcType="VARCHAR"/>
+            <result property="orderCode" column="ORDER_CODE" jdbcType="VARCHAR"/>
+            <result property="externalOrderCode" column="EXTERNAL_ORDER_CODE" jdbcType="VARCHAR"/>
+            <result property="paySerialCode" column="PAY_SERIAL_CODE" jdbcType="VARCHAR"/>
+            <result property="payCode" column="PAY_CODE" jdbcType="VARCHAR"/>
+            <result property="payMentType" column="PAY_MENT_TYPE" jdbcType="VARCHAR"/>
+            <result property="payMent" column="PAY_MENT" jdbcType="VARCHAR"/>
+            <result property="payChannel" column="PAY_CHANNEL" jdbcType="VARCHAR"/>
+            <result property="currencyCode" column="CURRENCY_CODE" jdbcType="CHAR"/>
+            <result property="payExtProps" column="PAY_EXT_PROPS" jdbcType="VARCHAR"/>
+            <result property="account" column="ACCOUNT" jdbcType="VARCHAR"/>
+            <result property="bankCode" column="BANK_CODE" jdbcType="VARCHAR"/>
+            <result property="bankBrand" column="BANK_BRAND" jdbcType="VARCHAR"/>
+            <result property="price" column="PRICE" jdbcType="DECIMAL"/>
+            <result property="isSucceed" column="IS_SUCCEED" jdbcType="CHAR"/>
+            <result property="cardNo" column="CARD_NO" jdbcType="VARCHAR"/>
+            <result property="reason" column="REASON" jdbcType="VARCHAR"/>
+            <result property="createTime" column="CREATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="UPDATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="deleteTime" column="DELETE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="createUser" column="CREATE_USER" jdbcType="VARCHAR"/>
+            <result property="updateUser" column="UPDATE_USER" jdbcType="VARCHAR"/>
+            <result property="payStatus" column="PAY_STATUS" jdbcType="CHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        TENANT_CODE,DOMAIN_CODE,ORG_CODE,
+        CHANNEL_CODE,ORDER_CODE,EXTERNAL_ORDER_CODE,
+        PAY_SERIAL_CODE,PAY_CODE,PAY_MENT_TYPE,
+        PAY_MENT,PAY_CHANNEL,CURRENCY_CODE,
+        PAY_EXT_PROPS,ACCOUNT,BANK_CODE,
+        BANK_BRAND,PRICE,IS_SUCCEED,
+        CARD_NO,REASON,CREATE_TIME,
+        UPDATE_TIME,DELETE_TIME,CREATE_USER,
+        UPDATE_USER,PAY_STATUS
+    </sql>
+</mapper>

@@ -10,6 +10,7 @@
         <module>douyin</module>
         <module>gtech-tools</module>
         <module>sharding-jdbc</module>
+        <module>ua-staging-tools</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.person.gtech.dao.mapper.TFulfillReturnMapper">
+
+    <resultMap id="BaseResultMap" type="com.person.gtech.dao.entity.TFulfillReturn">
+            <result property="tenantCode" column="TENANT_CODE" jdbcType="VARCHAR"/>
+            <result property="domainCode" column="DOMAIN_CODE" jdbcType="VARCHAR"/>
+            <result property="orgCode" column="ORG_CODE" jdbcType="VARCHAR"/>
+            <result property="channelCode" column="CHANNEL_CODE" jdbcType="VARCHAR"/>
+            <result property="fulfillReturnCode" column="FULFILL_RETURN_CODE" jdbcType="VARCHAR"/>
+            <result property="fulfillExchangeCode" column="FULFILL_EXCHANGE_CODE" jdbcType="VARCHAR"/>
+            <result property="returnCode" column="RETURN_CODE" jdbcType="VARCHAR"/>
+            <result property="externalReturnCode" column="EXTERNAL_RETURN_CODE" jdbcType="VARCHAR"/>
+            <result property="orderCode" column="ORDER_CODE" jdbcType="VARCHAR"/>
+            <result property="externalOrderCode" column="EXTERNAL_ORDER_CODE" jdbcType="VARCHAR"/>
+            <result property="deliveryCode" column="DELIVERY_CODE" jdbcType="VARCHAR"/>
+            <result property="subOrderType" column="SUB_ORDER_TYPE" jdbcType="VARCHAR"/>
+            <result property="subOrderCode" column="SUB_ORDER_CODE" jdbcType="VARCHAR"/>
+            <result property="nodeDocCode" column="NODE_DOC_CODE" jdbcType="VARCHAR"/>
+            <result property="memberOrgCode" column="MEMBER_ORG_CODE" jdbcType="VARCHAR"/>
+            <result property="memberCode" column="MEMBER_CODE" jdbcType="VARCHAR"/>
+            <result property="crmMemberCode" column="CRM_MEMBER_CODE" jdbcType="VARCHAR"/>
+            <result property="memberName" column="MEMBER_NAME" jdbcType="VARCHAR"/>
+            <result property="userCode" column="USER_CODE" jdbcType="VARCHAR"/>
+            <result property="userName" column="USER_NAME" jdbcType="VARCHAR"/>
+            <result property="returnMode" column="RETURN_MODE" jdbcType="CHAR"/>
+            <result property="status" column="STATUS" jdbcType="CHAR"/>
+            <result property="refundStatus" column="REFUND_STATUS" jdbcType="CHAR"/>
+            <result property="pickupMode" column="PICKUP_MODE" jdbcType="CHAR"/>
+            <result property="refundMode" column="REFUND_MODE" jdbcType="CHAR"/>
+            <result property="afterSaleSubType" column="after_sale_sub_type" jdbcType="VARCHAR"/>
+            <result property="createReturnNode" column="create_return_node" jdbcType="VARCHAR"/>
+            <result property="currencyCode" column="CURRENCY_CODE" jdbcType="CHAR"/>
+            <result property="amount" column="AMOUNT" jdbcType="DECIMAL"/>
+            <result property="description" column="DESCRIPTION" jdbcType="VARCHAR"/>
+            <result property="reason" column="REASON" jdbcType="VARCHAR"/>
+            <result property="freight" column="FREIGHT" jdbcType="DECIMAL"/>
+            <result property="isFreight" column="IS_FREIGHT" jdbcType="CHAR"/>
+            <result property="inNodeCode" column="IN_NODE_CODE" jdbcType="VARCHAR"/>
+            <result property="nodeType" column="NODE_TYPE" jdbcType="VARCHAR"/>
+            <result property="companyCode" column="COMPANY_CODE" jdbcType="VARCHAR"/>
+            <result property="companyName" column="COMPANY_NAME" jdbcType="VARCHAR"/>
+            <result property="expressCode" column="EXPRESS_CODE" jdbcType="VARCHAR"/>
+            <result property="actualInNodeCode" column="ACTUAL_IN_NODE_CODE" jdbcType="VARCHAR"/>
+            <result property="actualCompanyCode" column="ACTUAL_COMPANY_CODE" jdbcType="VARCHAR"/>
+            <result property="actualCompanyName" column="ACTUAL_COMPANY_NAME" jdbcType="VARCHAR"/>
+            <result property="actualExpressCode" column="ACTUAL_EXPRESS_CODE" jdbcType="VARCHAR"/>
+            <result property="actualInTime" column="ACTUAL_IN_TIME" jdbcType="TIMESTAMP"/>
+            <result property="image" column="IMAGE" jdbcType="VARCHAR"/>
+            <result property="isInvoice" column="IS_INVOICE" jdbcType="CHAR"/>
+            <result property="isTestreport" column="IS_TESTREPORT" jdbcType="CHAR"/>
+            <result property="email" column="EMAIL" jdbcType="VARCHAR"/>
+            <result property="mobile" column="MOBILE" jdbcType="VARCHAR"/>
+            <result property="source" column="SOURCE" jdbcType="VARCHAR"/>
+            <result property="tradeSource" column="TRADE_SOURCE" jdbcType="VARCHAR"/>
+            <result property="extProps" column="EXT_PROPS" jdbcType="VARCHAR"/>
+            <result property="cancelCode" column="CANCEL_CODE" jdbcType="VARCHAR"/>
+            <result property="cancelErrorReason" column="CANCEL_ERROR_REASON" jdbcType="VARCHAR"/>
+            <result property="isValid" column="IS_VALID" jdbcType="CHAR"/>
+            <result property="createTime" column="CREATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="UPDATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="deleteTime" column="DELETE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="createUser" column="CREATE_USER" jdbcType="VARCHAR"/>
+            <result property="updateUser" column="UPDATE_USER" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        TENANT_CODE,DOMAIN_CODE,ORG_CODE,
+        CHANNEL_CODE,FULFILL_RETURN_CODE,FULFILL_EXCHANGE_CODE,
+        RETURN_CODE,EXTERNAL_RETURN_CODE,ORDER_CODE,
+        EXTERNAL_ORDER_CODE,DELIVERY_CODE,SUB_ORDER_TYPE,
+        SUB_ORDER_CODE,NODE_DOC_CODE,MEMBER_ORG_CODE,
+        MEMBER_CODE,CRM_MEMBER_CODE,MEMBER_NAME,
+        USER_CODE,USER_NAME,RETURN_MODE,
+        STATUS,REFUND_STATUS,PICKUP_MODE,
+        REFUND_MODE,after_sale_sub_type,create_return_node,
+        CURRENCY_CODE,AMOUNT,DESCRIPTION,
+        REASON,FREIGHT,IS_FREIGHT,
+        IN_NODE_CODE,NODE_TYPE,COMPANY_CODE,
+        COMPANY_NAME,EXPRESS_CODE,ACTUAL_IN_NODE_CODE,
+        ACTUAL_COMPANY_CODE,ACTUAL_COMPANY_NAME,ACTUAL_EXPRESS_CODE,
+        ACTUAL_IN_TIME,IMAGE,IS_INVOICE,
+        IS_TESTREPORT,EMAIL,MOBILE,
+        SOURCE,TRADE_SOURCE,EXT_PROPS,
+        CANCEL_CODE,CANCEL_ERROR_REASON,IS_VALID,
+        CREATE_TIME,UPDATE_TIME,DELETE_TIME,
+        CREATE_USER,UPDATE_USER
+    </sql>
+</mapper>

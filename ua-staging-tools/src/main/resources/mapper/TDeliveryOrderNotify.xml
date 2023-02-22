@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.person.ua.dao.mapper.TDeliveryOrderNotifyMapper">
+
+    <delete id="deleteByIds">
+        delete from t_order_notify where id in
+        <foreach collection="ids" open="(" close=")" index="idx" item="id" separator=",">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="selectId" resultType="java.lang.Long">
+        select id from t_order_notify where BIZ_ORDER_CODE in
+        <foreach collection="orderCodes" open="(" close=")" index="idx" item="orderCode" separator=",">
+            #{orderCode}
+        </foreach>
+    </select>
+</mapper>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.person.gtech.dao.mapper.TOrderOrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.person.gtech.dao.entity.TOrderOrder">
+            <result property="tenantCode" column="TENANT_CODE" jdbcType="VARCHAR"/>
+            <result property="domainCode" column="DOMAIN_CODE" jdbcType="VARCHAR"/>
+            <result property="orgCode" column="ORG_CODE" jdbcType="VARCHAR"/>
+            <result property="channelCode" column="CHANNEL_CODE" jdbcType="VARCHAR"/>
+            <result property="orderCode" column="ORDER_CODE" jdbcType="VARCHAR"/>
+            <result property="externalOrderCode" column="EXTERNAL_ORDER_CODE" jdbcType="VARCHAR"/>
+            <result property="memberOrgCode" column="MEMBER_ORG_CODE" jdbcType="VARCHAR"/>
+            <result property="memberName" column="MEMBER_NAME" jdbcType="VARCHAR"/>
+            <result property="memberCode" column="MEMBER_CODE" jdbcType="VARCHAR"/>
+            <result property="externalMemberCode" column="EXTERNAL_MEMBER_CODE" jdbcType="VARCHAR"/>
+            <result property="userName" column="USER_NAME" jdbcType="VARCHAR"/>
+            <result property="userCode" column="USER_CODE" jdbcType="VARCHAR"/>
+            <result property="orderDate" column="ORDER_DATE" jdbcType="INTEGER"/>
+            <result property="payDate" column="PAY_DATE" jdbcType="INTEGER"/>
+            <result property="orderType" column="ORDER_TYPE" jdbcType="CHAR"/>
+            <result property="channelOrderType" column="CHANNEL_ORDER_TYPE" jdbcType="CHAR"/>
+            <result property="orderStatus" column="ORDER_STATUS" jdbcType="CHAR"/>
+            <result property="terminal" column="TERMINAL" jdbcType="CHAR"/>
+            <result property="amount" column="AMOUNT" jdbcType="DECIMAL"/>
+            <result property="currencyCode" column="CURRENCY_CODE" jdbcType="CHAR"/>
+            <result property="productAmount" column="PRODUCT_AMOUNT" jdbcType="DECIMAL"/>
+            <result property="discount" column="DISCOUNT" jdbcType="DECIMAL"/>
+            <result property="productDiscount" column="PRODUCT_DISCOUNT" jdbcType="DECIMAL"/>
+            <result property="freight" column="FREIGHT" jdbcType="DECIMAL"/>
+            <result property="freightExtAmount" column="FREIGHT_EXT_AMOUNT" jdbcType="DECIMAL"/>
+            <result property="freightDiscount" column="FREIGHT_DISCOUNT" jdbcType="DECIMAL"/>
+            <result property="tax" column="TAX" jdbcType="DECIMAL"/>
+            <result property="codAmount" column="COD_AMOUNT" jdbcType="DECIMAL"/>
+            <result property="coupon" column="COUPON" jdbcType="DECIMAL"/>
+            <result property="usedPoint" column="USED_POINT" jdbcType="DECIMAL"/>
+            <result property="usedPointAmount" column="USED_POINT_AMOUNT" jdbcType="DECIMAL"/>
+            <result property="serviceAmount" column="SERVICE_AMOUNT" jdbcType="DECIMAL"/>
+            <result property="receivedAmount" column="RECEIVED_AMOUNT" jdbcType="DECIMAL"/>
+            <result property="isInvoice" column="IS_INVOICE" jdbcType="CHAR"/>
+            <result property="isValid" column="IS_VALID" jdbcType="CHAR"/>
+            <result property="isFrozen" column="IS_FROZEN" jdbcType="CHAR"/>
+            <result property="isComment" column="IS_COMMENT" jdbcType="CHAR"/>
+            <result property="remarkBuyer" column="REMARK_BUYER" jdbcType="VARCHAR"/>
+            <result property="remarkTenant" column="REMARK_TENANT" jdbcType="VARCHAR"/>
+            <result property="expectTime" column="EXPECT_TIME" jdbcType="TIMESTAMP"/>
+            <result property="cancelTime" column="CANCEL_TIME" jdbcType="TIMESTAMP"/>
+            <result property="splitOrderFlag" column="SPLIT_ORDER_FLAG" jdbcType="CHAR"/>
+            <result property="packageType" column="PACKAGE_TYPE" jdbcType="CHAR"/>
+            <result property="payOperationAmount" column="PAY_OPERATION_AMOUNT" jdbcType="DECIMAL"/>
+            <result property="packageAmount" column="PACKAGE_AMOUNT" jdbcType="DECIMAL"/>
+            <result property="payTime" column="PAY_TIME" jdbcType="TIMESTAMP"/>
+            <result property="payMentType" column="PAY_MENT_TYPE" jdbcType="VARCHAR"/>
+            <result property="payMent" column="PAY_MENT" jdbcType="VARCHAR"/>
+            <result property="payChannel" column="PAY_CHANNEL" jdbcType="VARCHAR"/>
+            <result property="payExtProps" column="PAY_EXT_PROPS" jdbcType="VARCHAR"/>
+            <result property="bankCode" column="BANK_CODE" jdbcType="VARCHAR"/>
+            <result property="bankBrand" column="BANK_BRAND" jdbcType="VARCHAR"/>
+            <result property="payStatus" column="PAY_STATUS" jdbcType="CHAR"/>
+            <result property="isOmniChannel" column="IS_OMNI_CHANNEL" jdbcType="CHAR"/>
+            <result property="isGuest" column="IS_GUEST" jdbcType="CHAR"/>
+            <result property="tag" column="TAG" jdbcType="CHAR"/>
+            <result property="appCode" column="APP_CODE" jdbcType="VARCHAR"/>
+            <result property="source" column="SOURCE" jdbcType="VARCHAR"/>
+            <result property="tradeSource" column="TRADE_SOURCE" jdbcType="VARCHAR"/>
+            <result property="distributionType" column="DISTRIBUTION_TYPE" jdbcType="CHAR"/>
+            <result property="mobile" column="MOBILE" jdbcType="VARCHAR"/>
+            <result property="email" column="EMAIL" jdbcType="VARCHAR"/>
+            <result property="cancelCode" column="CANCEL_CODE" jdbcType="VARCHAR"/>
+            <result property="cancelRemark" column="CANCEL_REMARK" jdbcType="VARCHAR"/>
+            <result property="frozenReasonCode" column="FROZEN_REASON_CODE" jdbcType="VARCHAR"/>
+            <result property="extProps" column="EXT_PROPS" jdbcType="VARCHAR"/>
+            <result property="externalCreateTime" column="EXTERNAL_CREATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="balancePaymentTime" column="BALANCE_PAYMENT_TIME" jdbcType="TIMESTAMP"/>
+            <result property="createTime" column="CREATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="UPDATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="deleteTime" column="DELETE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="createUser" column="CREATE_USER" jdbcType="VARCHAR"/>
+            <result property="updateUser" column="UPDATE_USER" jdbcType="VARCHAR"/>
+            <result property="canRouteNode" column="CAN_ROUTE_NODE" jdbcType="CHAR"/>
+            <result property="externalCompleteTime" column="EXTERNAL_COMPLETE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="placeOrderOrgCode" column="PLACE_ORDER_ORG_CODE" jdbcType="VARCHAR"/>
+            <result property="crmMemberCode" column="CRM_MEMBER_CODE" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        TENANT_CODE,DOMAIN_CODE,ORG_CODE,
+        CHANNEL_CODE,ORDER_CODE,EXTERNAL_ORDER_CODE,
+        MEMBER_ORG_CODE,MEMBER_NAME,MEMBER_CODE,
+        EXTERNAL_MEMBER_CODE,USER_NAME,USER_CODE,
+        ORDER_DATE,PAY_DATE,ORDER_TYPE,
+        CHANNEL_ORDER_TYPE,ORDER_STATUS,TERMINAL,
+        AMOUNT,CURRENCY_CODE,PRODUCT_AMOUNT,
+        DISCOUNT,PRODUCT_DISCOUNT,FREIGHT,
+        FREIGHT_EXT_AMOUNT,FREIGHT_DISCOUNT,TAX,
+        COD_AMOUNT,COUPON,USED_POINT,
+        USED_POINT_AMOUNT,SERVICE_AMOUNT,RECEIVED_AMOUNT,
+        IS_INVOICE,IS_VALID,IS_FROZEN,
+        IS_COMMENT,REMARK_BUYER,REMARK_TENANT,
+        EXPECT_TIME,CANCEL_TIME,SPLIT_ORDER_FLAG,
+        PACKAGE_TYPE,PAY_OPERATION_AMOUNT,PACKAGE_AMOUNT,
+        PAY_TIME,PAY_MENT_TYPE,PAY_MENT,
+        PAY_CHANNEL,PAY_EXT_PROPS,BANK_CODE,
+        BANK_BRAND,PAY_STATUS,IS_OMNI_CHANNEL,
+        IS_GUEST,TAG,APP_CODE,
+        SOURCE,TRADE_SOURCE,DISTRIBUTION_TYPE,
+        MOBILE,EMAIL,CANCEL_CODE,
+        CANCEL_REMARK,FROZEN_REASON_CODE,EXT_PROPS,
+        EXTERNAL_CREATE_TIME,BALANCE_PAYMENT_TIME,CREATE_TIME,
+        UPDATE_TIME,DELETE_TIME,CREATE_USER,
+        UPDATE_USER,CAN_ROUTE_NODE,EXTERNAL_COMPLETE_TIME,
+        PLACE_ORDER_ORG_CODE,CRM_MEMBER_CODE
+    </sql>
+</mapper>

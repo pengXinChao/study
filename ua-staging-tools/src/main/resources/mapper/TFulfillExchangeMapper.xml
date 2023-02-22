@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.person.ua.dao.mapper.TFulfillExchangeMapper">
+
+    <resultMap id="BaseResultMap" type="com.person.ua.dao.entity.TFulfillExchange">
+            <result property="domainCode" column="DOMAIN_CODE" jdbcType="VARCHAR"/>
+            <result property="tenantCode" column="TENANT_CODE" jdbcType="VARCHAR"/>
+            <result property="channelCode" column="CHANNEL_CODE" jdbcType="VARCHAR"/>
+            <result property="orgCode" column="ORG_CODE" jdbcType="VARCHAR"/>
+            <result property="fulfillExchangeCode" column="FULFILL_EXCHANGE_CODE" jdbcType="VARCHAR"/>
+            <result property="returnCode" column="RETURN_CODE" jdbcType="VARCHAR"/>
+            <result property="externalReturnCode" column="EXTERNAL_RETURN_CODE" jdbcType="VARCHAR"/>
+            <result property="orderCode" column="ORDER_CODE" jdbcType="VARCHAR"/>
+            <result property="externalOrderCode" column="EXTERNAL_ORDER_CODE" jdbcType="VARCHAR"/>
+            <result property="memberCode" column="MEMBER_CODE" jdbcType="VARCHAR"/>
+            <result property="memberName" column="MEMBER_NAME" jdbcType="VARCHAR"/>
+            <result property="country" column="COUNTRY" jdbcType="VARCHAR"/>
+            <result property="countryName" column="COUNTRY_NAME" jdbcType="VARCHAR"/>
+            <result property="province" column="PROVINCE" jdbcType="VARCHAR"/>
+            <result property="provinceName" column="PROVINCE_NAME" jdbcType="VARCHAR"/>
+            <result property="city" column="CITY" jdbcType="VARCHAR"/>
+            <result property="cityName" column="CITY_NAME" jdbcType="VARCHAR"/>
+            <result property="district" column="DISTRICT" jdbcType="VARCHAR"/>
+            <result property="districtName" column="DISTRICT_NAME" jdbcType="VARCHAR"/>
+            <result property="address" column="ADDRESS" jdbcType="VARCHAR"/>
+            <result property="addressId" column="ADDRESS_ID" jdbcType="VARCHAR"/>
+            <result property="lastName" column="LAST_NAME" jdbcType="VARCHAR"/>
+            <result property="firstName" column="FIRST_NAME" jdbcType="VARCHAR"/>
+            <result property="name" column="NAME" jdbcType="VARCHAR"/>
+            <result property="mobile" column="MOBILE" jdbcType="VARCHAR"/>
+            <result property="telephone" column="TELEPHONE" jdbcType="VARCHAR"/>
+            <result property="mail" column="MAIL" jdbcType="VARCHAR"/>
+            <result property="zipCode" column="ZIP_CODE" jdbcType="VARCHAR"/>
+            <result property="isValid" column="IS_VALID" jdbcType="CHAR"/>
+            <result property="createTime" column="CREATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="UPDATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="createUser" column="CREATE_USER" jdbcType="VARCHAR"/>
+            <result property="updateUser" column="UPDATE_USER" jdbcType="VARCHAR"/>
+            <result property="streetName" column="STREET_NAME" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        DOMAIN_CODE,TENANT_CODE,CHANNEL_CODE,
+        ORG_CODE,FULFILL_EXCHANGE_CODE,RETURN_CODE,
+        EXTERNAL_RETURN_CODE,ORDER_CODE,EXTERNAL_ORDER_CODE,
+        MEMBER_CODE,MEMBER_NAME,COUNTRY,
+        COUNTRY_NAME,PROVINCE,PROVINCE_NAME,
+        CITY,CITY_NAME,DISTRICT,
+        DISTRICT_NAME,ADDRESS,ADDRESS_ID,
+        LAST_NAME,FIRST_NAME,NAME,
+        MOBILE,TELEPHONE,MAIL,
+        ZIP_CODE,IS_VALID,CREATE_TIME,
+        UPDATE_TIME,CREATE_USER,UPDATE_USER,
+        STREET_NAME
+    </sql>
+</mapper>

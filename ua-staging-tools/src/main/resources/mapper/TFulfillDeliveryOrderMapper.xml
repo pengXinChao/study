@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.person.ua.dao.mapper.TFulfillDeliveryOrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.person.ua.dao.entity.TFulfillDeliveryOrder">
+            <result property="deliveryCode" column="DELIVERY_CODE" jdbcType="VARCHAR"/>
+            <result property="orderCode" column="ORDER_CODE" jdbcType="VARCHAR"/>
+            <result property="externalOrderCode" column="EXTERNAL_ORDER_CODE" jdbcType="VARCHAR"/>
+            <result property="nodeDocNo" column="NODE_DOC_NO" jdbcType="VARCHAR"/>
+            <result property="canRouteNode" column="CAN_ROUTE_NODE" jdbcType="CHAR"/>
+            <result property="assNodeCode" column="ASS_NODE_CODE" jdbcType="VARCHAR"/>
+            <result property="routeNodeCode" column="ROUTE_NODE_CODE" jdbcType="VARCHAR"/>
+            <result property="routeNodeType" column="ROUTE_NODE_TYPE" jdbcType="CHAR"/>
+            <result property="actualNodeCode" column="ACTUAL_NODE_CODE" jdbcType="VARCHAR"/>
+            <result property="status" column="STATUS" jdbcType="CHAR"/>
+            <result property="transCode" column="TRANS_CODE" jdbcType="VARCHAR"/>
+            <result property="currencyCode" column="CURRENCY_CODE" jdbcType="CHAR"/>
+            <result property="orderType" column="ORDER_TYPE" jdbcType="CHAR"/>
+            <result property="deliveryOrderType" column="DELIVERY_ORDER_TYPE" jdbcType="CHAR"/>
+            <result property="amount" column="AMOUNT" jdbcType="DECIMAL"/>
+            <result property="productAmount" column="PRODUCT_AMOUNT" jdbcType="DECIMAL"/>
+            <result property="actualAmount" column="ACTUAL_AMOUNT" jdbcType="DECIMAL"/>
+            <result property="sellAmount" column="SELL_AMOUNT" jdbcType="DECIMAL"/>
+            <result property="receivedAmount" column="RECEIVED_AMOUNT" jdbcType="DECIMAL"/>
+            <result property="usedPoint" column="USED_POINT" jdbcType="DECIMAL"/>
+            <result property="usedPointAmount" column="USED_POINT_AMOUNT" jdbcType="DECIMAL"/>
+            <result property="serviceAmount" column="SERVICE_AMOUNT" jdbcType="DECIMAL"/>
+            <result property="tax" column="TAX" jdbcType="DECIMAL"/>
+            <result property="freight" column="FREIGHT" jdbcType="DECIMAL"/>
+            <result property="freightExtAmount" column="FREIGHT_EXT_AMOUNT" jdbcType="DECIMAL"/>
+            <result property="discount" column="DISCOUNT" jdbcType="DECIMAL"/>
+            <result property="coupon" column="COUPON" jdbcType="DECIMAL"/>
+            <result property="cancelCode" column="CANCEL_CODE" jdbcType="VARCHAR"/>
+            <result property="cancelRemark" column="CANCEL_REMARK" jdbcType="VARCHAR"/>
+            <result property="sourceType" column="SOURCE_TYPE" jdbcType="CHAR"/>
+            <result property="memberName" column="MEMBER_NAME" jdbcType="VARCHAR"/>
+            <result property="memberCode" column="MEMBER_CODE" jdbcType="VARCHAR"/>
+            <result property="crmMemberCode" column="CRM_MEMBER_CODE" jdbcType="VARCHAR"/>
+            <result property="commitNodeTime" column="COMMIT_NODE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="outboundNodeTime" column="OUTBOUND_NODE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="receiveOutboundTime" column="RECEIVE_OUTBOUND_TIME" jdbcType="TIMESTAMP"/>
+            <result property="cancelTime" column="CANCEL_TIME" jdbcType="TIMESTAMP"/>
+            <result property="finishedTime" column="FINISHED_TIME" jdbcType="TIMESTAMP"/>
+            <result property="signedTime" column="SIGNED_TIME" jdbcType="TIMESTAMP"/>
+            <result property="remarkTenant" column="REMARK_TENANT" jdbcType="VARCHAR"/>
+            <result property="remarkBuyer" column="REMARK_BUYER" jdbcType="VARCHAR"/>
+            <result property="isValid" column="IS_VALID" jdbcType="CHAR"/>
+            <result property="tenantCode" column="TENANT_CODE" jdbcType="VARCHAR"/>
+            <result property="domainCode" column="DOMAIN_CODE" jdbcType="VARCHAR"/>
+            <result property="orgCode" column="ORG_CODE" jdbcType="VARCHAR"/>
+            <result property="channelCode" column="CHANNEL_CODE" jdbcType="VARCHAR"/>
+            <result property="createTime" column="CREATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="createUser" column="CREATE_USER" jdbcType="VARCHAR"/>
+            <result property="updateTime" column="UPDATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="updateUser" column="UPDATE_USER" jdbcType="VARCHAR"/>
+            <result property="deleteTime" column="DELETE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="errorMessage" column="ERROR_MESSAGE" jdbcType="VARCHAR"/>
+            <result property="errorCode" column="ERROR_CODE" jdbcType="VARCHAR"/>
+            <result property="payTime" column="PAY_TIME" jdbcType="TIMESTAMP"/>
+            <result property="externalOrderCreateTime" column="EXTERNAL_ORDER_CREATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="distributionType" column="DISTRIBUTION_TYPE" jdbcType="CHAR"/>
+            <result property="transTimeType" column="TRANS_TIME_TYPE" jdbcType="CHAR"/>
+            <result property="transServiceType" column="TRANS_SERVICE_TYPE" jdbcType="CHAR"/>
+            <result property="isCod" column="IS_COD" jdbcType="CHAR"/>
+            <result property="isInvoice" column="IS_INVOICE" jdbcType="CHAR"/>
+            <result property="codAmount" column="COD_AMOUNT" jdbcType="DECIMAL"/>
+            <result property="shopCode" column="SHOP_CODE" jdbcType="VARCHAR"/>
+            <result property="assNodeName" column="ASS_NODE_NAME" jdbcType="VARCHAR"/>
+            <result property="routeNodeName" column="ROUTE_NODE_NAME" jdbcType="VARCHAR"/>
+            <result property="actualNodeName" column="ACTUAL_NODE_NAME" jdbcType="VARCHAR"/>
+            <result property="routeNodeBlacklist" column="ROUTE_NODE_BLACKLIST" jdbcType="VARCHAR"/>
+            <result property="orderCreateTime" column="ORDER_CREATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="expectTime" column="EXPECT_TIME" jdbcType="TIMESTAMP"/>
+            <result property="isContainService" column="IS_CONTAIN_SERVICE" jdbcType="CHAR"/>
+            <result property="useRouting" column="USE_ROUTING" jdbcType="CHAR"/>
+            <result property="splitOrderType" column="SPLIT_ORDER_TYPE" jdbcType="CHAR"/>
+            <result property="originalOrderCode" column="ORIGINAL_ORDER_CODE" jdbcType="VARCHAR"/>
+            <result property="fulfillExchangeCode" column="FULFILL_EXCHANGE_CODE" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        DELIVERY_CODE,ORDER_CODE,EXTERNAL_ORDER_CODE,
+        NODE_DOC_NO,CAN_ROUTE_NODE,ASS_NODE_CODE,
+        ROUTE_NODE_CODE,ROUTE_NODE_TYPE,ACTUAL_NODE_CODE,
+        STATUS,TRANS_CODE,CURRENCY_CODE,
+        ORDER_TYPE,DELIVERY_ORDER_TYPE,AMOUNT,
+        PRODUCT_AMOUNT,ACTUAL_AMOUNT,SELL_AMOUNT,
+        RECEIVED_AMOUNT,USED_POINT,USED_POINT_AMOUNT,
+        SERVICE_AMOUNT,TAX,FREIGHT,
+        FREIGHT_EXT_AMOUNT,DISCOUNT,COUPON,
+        CANCEL_CODE,CANCEL_REMARK,SOURCE_TYPE,
+        MEMBER_NAME,MEMBER_CODE,CRM_MEMBER_CODE,
+        COMMIT_NODE_TIME,OUTBOUND_NODE_TIME,RECEIVE_OUTBOUND_TIME,
+        CANCEL_TIME,FINISHED_TIME,SIGNED_TIME,
+        REMARK_TENANT,REMARK_BUYER,IS_VALID,
+        TENANT_CODE,DOMAIN_CODE,ORG_CODE,
+        CHANNEL_CODE,CREATE_TIME,CREATE_USER,
+        UPDATE_TIME,UPDATE_USER,DELETE_TIME,
+        ERROR_MESSAGE,ERROR_CODE,PAY_TIME,
+        EXTERNAL_ORDER_CREATE_TIME,DISTRIBUTION_TYPE,TRANS_TIME_TYPE,
+        TRANS_SERVICE_TYPE,IS_COD,IS_INVOICE,
+        COD_AMOUNT,SHOP_CODE,ASS_NODE_NAME,
+        ROUTE_NODE_NAME,ACTUAL_NODE_NAME,ROUTE_NODE_BLACKLIST,
+        ORDER_CREATE_TIME,EXPECT_TIME,IS_CONTAIN_SERVICE,
+        USE_ROUTING,SPLIT_ORDER_TYPE,ORIGINAL_ORDER_CODE,
+        FULFILL_EXCHANGE_CODE
+    </sql>
+    <delete id="deleteByIds">
+        delete from t_fulfill_delivery_order where id in
+        <foreach collection="ids" open="(" close=")" index="idx" item="id" separator=",">
+            #{id}
+        </foreach>
+    </delete>
+    <select id="selectId" resultType="java.lang.Long">
+        select id from t_fulfill_delivery_order where order_code in
+        <foreach collection="orderCodes" open="(" close=")" index="idx" item="orderCode" separator=",">
+            #{orderCode}
+        </foreach>
+    </select>
+</mapper>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.person.gtech.dao.mapper.TFulfillDeliveryOrderItemMapper">
+
+    <resultMap id="BaseResultMap" type="com.person.gtech.dao.entity.TFulfillDeliveryOrderItem">
+            <result property="deliveryCode" column="DELIVERY_CODE" jdbcType="VARCHAR"/>
+            <result property="deliveryItemCode" column="DELIVERY_ITEM_CODE" jdbcType="VARCHAR"/>
+            <result property="orderCode" column="ORDER_CODE" jdbcType="VARCHAR"/>
+            <result property="externalOrderItemCode" column="EXTERNAL_ORDER_ITEM_CODE" jdbcType="VARCHAR"/>
+            <result property="orderItemCode" column="ORDER_ITEM_CODE" jdbcType="VARCHAR"/>
+            <result property="productType" column="PRODUCT_TYPE" jdbcType="VARCHAR"/>
+            <result property="skuCode" column="SKU_CODE" jdbcType="VARCHAR"/>
+            <result property="skuName" column="SKU_NAME" jdbcType="VARCHAR"/>
+            <result property="productCode" column="PRODUCT_CODE" jdbcType="VARCHAR"/>
+            <result property="count" column="COUNT" jdbcType="INTEGER"/>
+            <result property="amount" column="AMOUNT" jdbcType="DECIMAL"/>
+            <result property="pfDiscount" column="PF_DISCOUNT" jdbcType="DECIMAL"/>
+            <result property="extAmount1" column="EXT_AMOUNT_1" jdbcType="DECIMAL"/>
+            <result property="actualPrice" column="ACTUAL_PRICE" jdbcType="DECIMAL"/>
+            <result property="salePrice" column="SALE_PRICE" jdbcType="DECIMAL"/>
+            <result property="sellPrice" column="SELL_PRICE" jdbcType="DECIMAL"/>
+            <result property="usedPoint" column="USED_POINT" jdbcType="DECIMAL"/>
+            <result property="usedPointAmount" column="USED_POINT_AMOUNT" jdbcType="DECIMAL"/>
+            <result property="tax" column="TAX" jdbcType="DECIMAL"/>
+            <result property="isGift" column="IS_GIFT" jdbcType="CHAR"/>
+            <result property="giftType" column="GIFT_TYPE" jdbcType="VARCHAR"/>
+            <result property="groupCode" column="GROUP_CODE" jdbcType="VARCHAR"/>
+            <result property="groupCount" column="GROUP_COUNT" jdbcType="INTEGER"/>
+            <result property="activityCode" column="ACTIVITY_CODE" jdbcType="VARCHAR"/>
+            <result property="brandCode" column="BRAND_CODE" jdbcType="VARCHAR"/>
+            <result property="brandName" column="BRAND_NAME" jdbcType="VARCHAR"/>
+            <result property="isValid" column="IS_VALID" jdbcType="CHAR"/>
+            <result property="tenantCode" column="TENANT_CODE" jdbcType="VARCHAR"/>
+            <result property="domainCode" column="DOMAIN_CODE" jdbcType="VARCHAR"/>
+            <result property="orgCode" column="ORG_CODE" jdbcType="VARCHAR"/>
+            <result property="channelCode" column="CHANNEL_CODE" jdbcType="VARCHAR"/>
+            <result property="createTime" column="CREATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="createUser" column="CREATE_USER" jdbcType="VARCHAR"/>
+            <result property="updateTime" column="UPDATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="updateUser" column="UPDATE_USER" jdbcType="VARCHAR"/>
+            <result property="brandSkuCode" column="BRAND_SKU_CODE" jdbcType="VARCHAR"/>
+            <result property="barCode" column="BAR_CODE" jdbcType="VARCHAR"/>
+            <result property="externalSkuCode" column="EXTERNAL_SKU_CODE" jdbcType="VARCHAR"/>
+            <result property="attribute" column="ATTRIBUTE" jdbcType="VARCHAR"/>
+            <result property="keyAttribute" column="KEY_ATTRIBUTE" jdbcType="VARCHAR"/>
+            <result property="image" column="IMAGE" jdbcType="VARCHAR"/>
+            <result property="productPrice" column="PRODUCT_PRICE" jdbcType="DECIMAL"/>
+            <result property="cancelReasonCode" column="CANCEL_REASON_CODE" jdbcType="VARCHAR"/>
+            <result property="cancelReasonDesc" column="CANCEL_REASON_DESC" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        DELIVERY_CODE,DELIVERY_ITEM_CODE,ORDER_CODE,
+        EXTERNAL_ORDER_ITEM_CODE,ORDER_ITEM_CODE,PRODUCT_TYPE,
+        SKU_CODE,SKU_NAME,PRODUCT_CODE,
+        COUNT,AMOUNT,PF_DISCOUNT,
+        EXT_AMOUNT_1,ACTUAL_PRICE,SALE_PRICE,
+        SELL_PRICE,USED_POINT,USED_POINT_AMOUNT,
+        TAX,IS_GIFT,GIFT_TYPE,
+        GROUP_CODE,GROUP_COUNT,ACTIVITY_CODE,
+        BRAND_CODE,BRAND_NAME,IS_VALID,
+        TENANT_CODE,DOMAIN_CODE,ORG_CODE,
+        CHANNEL_CODE,CREATE_TIME,CREATE_USER,
+        UPDATE_TIME,UPDATE_USER,BRAND_SKU_CODE,
+        BAR_CODE,EXTERNAL_SKU_CODE,ATTRIBUTE,
+        KEY_ATTRIBUTE,IMAGE,PRODUCT_PRICE,
+        CANCEL_REASON_CODE,CANCEL_REASON_DESC
+    </sql>
+</mapper>

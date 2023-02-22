@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.person.ua.dao.mapper.TOrderExpressProductMapper">
+
+    <resultMap id="BaseResultMap" type="com.person.ua.dao.entity.TOrderExpressProduct">
+            <result property="tenantCode" column="TENANT_CODE" jdbcType="VARCHAR"/>
+            <result property="domainCode" column="DOMAIN_CODE" jdbcType="VARCHAR"/>
+            <result property="channelCode" column="CHANNEL_CODE" jdbcType="VARCHAR"/>
+            <result property="orgCode" column="ORG_CODE" jdbcType="VARCHAR"/>
+            <result property="expressCode" column="EXPRESS_CODE" jdbcType="VARCHAR"/>
+            <result property="orderExpressCode" column="ORDER_EXPRESS_CODE" jdbcType="VARCHAR"/>
+            <result property="expressProductCode" column="EXPRESS_PRODUCT_CODE" jdbcType="VARCHAR"/>
+            <result property="orderCode" column="ORDER_CODE" jdbcType="VARCHAR"/>
+            <result property="orderItemCode" column="ORDER_ITEM_CODE" jdbcType="VARCHAR"/>
+            <result property="externalOrderItemCode" column="EXTERNAL_ORDER_ITEM_CODE" jdbcType="VARCHAR"/>
+            <result property="subOrderItemCode" column="SUB_ORDER_ITEM_CODE" jdbcType="VARCHAR"/>
+            <result property="subOrderCode" column="SUB_ORDER_CODE" jdbcType="VARCHAR"/>
+            <result property="skuCode" column="SKU_CODE" jdbcType="VARCHAR"/>
+            <result property="count" column="COUNT" jdbcType="INTEGER"/>
+            <result property="isValid" column="IS_VALID" jdbcType="CHAR"/>
+            <result property="createTime" column="CREATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="UPDATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="deleteTime" column="DELETE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="createUser" column="CREATE_USER" jdbcType="VARCHAR"/>
+            <result property="updateUser" column="UPDATE_USER" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        TENANT_CODE,DOMAIN_CODE,CHANNEL_CODE,
+        ORG_CODE,EXPRESS_CODE,ORDER_EXPRESS_CODE,
+        EXPRESS_PRODUCT_CODE,ORDER_CODE,ORDER_ITEM_CODE,
+        EXTERNAL_ORDER_ITEM_CODE,SUB_ORDER_ITEM_CODE,SUB_ORDER_CODE,
+        SKU_CODE,COUNT,IS_VALID,
+        CREATE_TIME,UPDATE_TIME,DELETE_TIME,
+        CREATE_USER,UPDATE_USER
+    </sql>
+</mapper>
